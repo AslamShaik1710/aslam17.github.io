@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <form action="/action_page.php">
+            <div class="container">
+              <h1>Hello Student</h1>
+              
+              
+          
+              <label for="email"><b>Enter the name of the subject U want to study </b></label>
+              <input type="text" placeholder="Enter Sub" name="email" id="sub" required>
+              <button type="button" onclick="myFunction()">Submit</button>
+
+              <p id="demo"></p>
+              
+              <script>
+              function myFunction() {
+                var x, text;
+              
+                // Get the value of the input field with id="numb"
+                x = document.getElementById("numb").value;
+              
+                // If x is Not a Number or less than one or greater than 10
+                if (x.substring(0,2)=="19") {
+                  text = "Hello || yr student";
+
+                } 
+                else {
+                  text = "Hello 2 yr student";
+                }
+                document.getElementById("demo").innerHTML = text;
+              }
+              </script>
+              
+          
+              
+          
+              
+            </div>
+            
+            
+          </form>
+
+          <button onclick="window.location.href='https://drive.google.com/folderview?id=1003PAxZP1ifvN8wD8gAIu-PIWLXn0rc6';">
+            Start Learning
+          </button>
+        
+    </body>
+</html>

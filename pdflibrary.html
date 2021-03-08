@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pdf Library .com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+
+<body>
+
+<h2 class="w3-center"> Know the Founders </h2>
+
+<div class="w3-content w3-section" style="max-width:350px">
+  <img class="mySlides" src="aslu.jpg" style="width:75%">
+  <img class="mySlides" src="katta.jpg" style="width:75%">
+  <img class="mySlides" src="bond.jpg" style="width:75%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+
+<form action="/action_page.php">
+    <div class="container">
+      <h1>Hello Student</h1>
+      
+      
+  
+      <label for="email"><b>Enter your roll number </b></label>
+      <input type="text" placeholder="Enter Roll NO" name="email" id="roll" required>
+      
+  
+      
+  
+      
+    </div>
+    
+    
+  </form>
+  <button onclick="window.location.href='https://drive.google.com/folderview?id=1003PAxZP1ifvN8wD8gAIu-PIWLXn0rc6';">
+    Start Learning
+  </button>
+  <script>
+    function myFunction() {
+      var x, text;
+    
+      // Get the value of the input field with id="numb"
+      x = document.getElementById("roll").value;
+    
+      // If x is Not a Number or less than one or greater than 10
+      if (x.substring(0,2)=="19") {
+        text = "Hello || yr student";
+
+      } 
+      else {
+        text = "Hello 2 yr student";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+    
+</body>
+</html>
