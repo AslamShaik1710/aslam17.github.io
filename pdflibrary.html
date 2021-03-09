@@ -19,33 +19,71 @@
     {
       text-align: center;
     }
+    #table
+    {
+      margin: auto; 
+    }
   </style>
 </head>
 <body>
   <h2 class="jumbotron jumbotron-fluid bush"> Know the Founders </h2>
-  <div style="max-width:350px">
+  <table class="jumbotron jumbotron-fluid bush" id = "table">
+   <tr>
+     <td>
+       <img id = "img" width = "300px" height="400px">      
+      </td>
+   </tr>
+   <tr>
+      <td id = "name">
+        </td>
+   </tr>
+  </table>
+  <script>
+      i = 0;
+      image();
+      function image()
+      {
+          if(i==4)
+            i=0;
+          var a = ['Aslam Shaik','Nikhil Katta','Bhargav Ram Reddy','Pranay Kumar'];
+          var img = document.getElementById("img");
+          var name = document.getElementById("name");
+          var imgs = ["aslu.jpg","katta.jpg","bond.jpg","pk1.jpg"];
+          img.src = imgs[i];
+          name.innerHTML = a[i];
+          i++;
+          setTimeout(image,3000 );
+      }
+    </script>
+  <!-- <div style="max-width:350px" class = "container">
     <img class="mySlides" src="aslu.jpg" style="width:75%">
     <img class="mySlides" src="katta.jpg" style="width:75%">
     <img class="mySlides" src="bond.jpg" style="width:75%">
     <img class="mySlides" src="pk1.jpg" style="width:75%">
-  </div>
-<script>
+    <div id = "name"></div>
+  </div> -->
+  
+<!-- <script>
   var myIndex = 0;
   carousel();
   function carousel() {
     var i;
+    var a = ['Aslam Shaik','Nikhil Katta','Bhargav Ram Reddy','Pranay Kumar']
     var x = document.getElementsByClassName("mySlides");
+    var n = document.getElementById("name");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";  
     }
+    
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
+    x[myIndex-1].style.display = "block"; 
+    n.innerHTML = a[myIndex-1];
     setTimeout(carousel, 4000); 
   }
-</script>
+</script> -->
 <div class="container bush">
-  <h1>Hello Student</h1>
+  <h1>Hello Student,Welcome to PDF_Library</h1>
     <label for="email"><b>Enter your roll number </b></label>
     <input type="text" placeholder="Enter Roll No" name="email" id="roll" required autocomplete = "off">
     <button onclick="func()" class = "btn btn-primary">Start learning</button>
@@ -70,5 +108,7 @@
     
     </script>
     <p class = "bush">***Note This site is under construction and is working for only CSE .. plz be patient  until we add other branches ***</p>
+    <marquee behavior="scroll" direction="left" scrollamount ="10">Special Thanks to All the CR's of CVR for making this website possibe.</marquee>
+
 </body>
 </html>
